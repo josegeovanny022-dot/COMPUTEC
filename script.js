@@ -95,13 +95,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const imagenes = [
 
-        "img/compu.jpg",
+        "compu.jpg",
 
-        "img/computadora1.webp",
+        "computadora1.webp",
 
-        "img/computadora2.png",
+        "computadora2.png",
 
-        "img/computadora3.webp"
+        "computadora3.webp"
 
     ];
 
