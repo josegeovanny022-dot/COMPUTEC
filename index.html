@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMPUTEC | Mundo de las Computadoras</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">💻 COMPUTEC</div>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#partes">Partes</a>
+        <a href="#tipos">Tipos</a>
+        <a href="#historia">Historia</a>
+        <a href="#tareas">Tareas</a>
+        <a href="#multimedia">Multimedia</a>
+        <a href="#formulario">Contacto</a>
+        <a href="#registro">Registro</a>
+    </nav>
+
+    <button id="modoBtn">Modo oscuro</button>
+</header>
+
+<main>
+
+    <!-- INICIO -->
+    <section id="inicio" class="hero">
+        <div class="hero-contenido">
+            <h1>COMPUTEC</h1>
+            <h2>Mundo de las Computadoras</h2>
+            <p>
+                Descubre las partes, tipos, historia y funcionamiento
+                de las computadoras de una manera sencilla.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- BUSCADOR -->
+    <section class="buscador-seccion">
+        <h2> Buscar en COMPUTEC</h2>
+
+        <input
+            type="text"
+            id="buscador"
+            placeholder="Escribe algo para buscar..."
+        >
+
+        <div id="resultados"></div>
+    </section>
+
+
+    <!-- CARRUSEL DE 4 IMÁGENES -->
+    <section class="carrusel-seccion">
+
+        <h2> Galería de Computadoras</h2>
+
+        <div class="carrusel">
+
+            <button
+                class="carrusel-btn izquierda"
+                onclick="anterior()">
+                ❮
+            </button>
+
+
+            <img
+                id="imagenCarrusel"
+                src="img/compu.jpg"
+                alt="Computadora"
+            >
+
+            <button
+                class="carrusel-btn derecha"
+                onclick="siguiente()">
+                ❯
+            </button>
+
+        </div>
+
+        <div class="puntos">
+
+            <span
+                class="punto activo"
+                onclick="irAImagen(0)">
+            </span>
+
+            <span
+                class="punto"
+                onclick="irAImagen(1)">
+            </span>
+
+            <span
+                class="punto"
+                onclick="irAImagen(2)">
+            </span>
+
+            <span
+                class="punto"
+                onclick="irAImagen(3)">
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- PARTES -->
+    <section id="partes">
+
+        <h2> Partes de una Computadora</h2>
+
+        <div class="contenedor-tarjetas">
+
+            <article class="tarjeta">
+
+                <div class="icono"></div>
+
+                <h3>CPU</h3>
+
+                <p>
+                    Es el procesador y se encarga de ejecutar
+                    las instrucciones de la computadora.
+                </p>
+
+                <div class="contenido-extra">
+                    <p>
+                        La CPU es considerada el cerebro de la
+                        computadora. Realiza cálculos y coordina
+                        diferentes procesos.
+                    </p>
+                </div>
+
+                <button class="leer">
+                    Leer más
+                </button>
+
+            </article>
+
+
+            <article class="tarjeta">
+
+                <div class="icono"></div>
+
+                <h3>RAM</h3>
+
+                <p>
+                    Es la memoria temporal utilizada para ejecutar
+                    programas y procesos.
+                </p>
+
+                <div class="contenido-extra">
+                    <p>
+                        Una mayor cantidad de memoria RAM permite
+                        trabajar con más aplicaciones al mismo tiempo.
+                    </p>
+                </div>
+
+                <button class="leer">
+                    Leer más
+                </button>
+
+            </article>
+
+
+            <article class="tarjeta">
+
+                <div class="icono"></div>
+
+                <h3>SSD</h3>
+
+                <p>
+                    Es una unidad de almacenamiento rápida para
+                    guardar archivos y programas.
+                </p>
+
+                <div class="contenido-extra">
+                    <p>
+                        Los SSD son más rápidos y silenciosos que
+                        los discos duros tradicionales.
+                    </p>
+                </div>
+
+                <button class="leer">
+                    Leer más
+                </button>
+
+            </article>
+
+
+            <article class="tarjeta">
+
+                <div class="icono"></div>
+
+                <h3>Tarjeta gráfica</h3>
+
+                <p>
+                    Procesa las imágenes, videos y gráficos
+                    que aparecen en pantalla.
+                </p>
+
+                <div class="contenido-extra">
+                    <p>
+                        Es especialmente importante para videojuegos,
+                        edición de video y diseño gráfico.
+                    </p>
+                </div>
+
+                <button class="leer">
+                    Leer más
+                </button>
+
+            </article>
+
+
+            <article class="tarjeta">
+
+                <div class="icono"></div>
+
+                <h3>Fuente de poder</h3>
+
+                <p>
+                    Proporciona energía eléctrica a los componentes
+                    de la computadora.
+                </p>
+
+                <div class="contenido-extra">
+                    <p>
+                        Convierte la electricidad y distribuye
+                        la energía necesaria para que funcionen
+                        los componentes.
+                    </p>
+                </div>
+
+                <button class="leer">
+                    Leer más
+                </button>
+
+            </article>
+
+
+            <article class="tarjeta">
+
+                <div class="icono"></div>
+
+                <h3>Tarjeta madre</h3>
+
+                <p>
+                    Conecta y permite la comunicación entre
+                    los diferentes componentes.
+                </p>
+
+                <div class="contenido-extra">
+                    <p>
+                        En ella se conectan componentes como la CPU,
+                        memoria RAM, almacenamiento y otros dispositivos.
+                    </p>
+                </div>
+
+                <button class="leer">
+                    Leer más
+                </button>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- TIPOS -->
+    <section id="tipos">
+
+        <h2> Tipos de Computadoras</h2>
+
+        <div class="contenedor-tarjetas">
+
+            <article class="tarjeta">
+
+                <div class="icono"></div>
+
+                <h3>PC de escritorio</h3>
+
+                <p>
+                    Computadora diseñada para permanecer
+                    en un lugar fijo.
+                </p>
+
+                <div class="contenido-extra">
+                    <p>
+                        Se utiliza en hogares, oficinas, escuelas
+                        y diferentes centros de trabajo.
+                    </p>
+                </div>
+
+                <button class="leer">
+                    Leer más
+                </button>
+
+            </article>
+
+
+            <article class="tarjeta">
+
+                <div class="icono"></div>
+
+                <h3>Laptop</h3>
+
+                <p>
+                    Computadora portátil que puede transportarse
+                    fácilmente.
+                </p>
+
+                <div class="contenido-extra">
+                    <p>
+                        Tiene pantalla, teclado, batería y componentes
+                        integrados en un solo equipo.
+                    </p>
+                </div>
+
+                <button class="leer">
+                    Leer más
+                </button>
+
+            </article>
+
+
+            <article class="tarjeta">
+
+                <div class="icono"></div>
+
+                <h3>Supercomputadora</h3>
+
+                <p>
+                    Computadora con una enorme capacidad
+                    de procesamiento.
+                </p>
+
+                <div class="contenido-extra">
+                    <p>
+                        Se utiliza para investigaciones científicas,
+                        simulaciones y cálculos muy complejos.
+                    </p>
+                </div>
+
+                <button class="leer">
+                    Leer más
+                </button>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- HISTORIA -->
+    <section id="historia">
+
+        <h2> Historia de las Computadoras</h2>
+
+        <div class="historia-contenedor">
+
+            <div class="historia-item">
+
+                <span>1940</span>
+
+                <h3>Primeras computadoras</h3>
+
+                <p>
+                    Las primeras computadoras eran grandes,
+                    costosas y utilizaban mucha energía.
+                </p>
+
+            </div>
+
+
+            <div class="historia-item">
+
+                <span>1970</span>
+
+                <h3>Microprocesadores</h3>
+
+                <p>
+                    El desarrollo de los microprocesadores permitió
+                    crear computadoras más pequeñas.
+                </p>
+
+            </div>
+
+
+            <div class="historia-item">
+
+                <span>1980</span>
+
+                <h3>Computadoras personales</h3>
+
+                <p>
+                    Las computadoras comenzaron a llegar a hogares,
+                    escuelas y oficinas.
+                </p>
+
+            </div>
+
+
+            <div class="historia-item">
+
+                <span>Actualidad</span>
+
+                <h3>Era digital</h3>
+
+                <p>
+                    Actualmente existen computadoras cada vez más
+                    rápidas, pequeñas y conectadas a Internet.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TAREAS -->
+    <section id="tareas">
+
+        <h2> Administrador de Tareas</h2>
+
+        <div class="tareas-contenedor">
+
+            <div class="entrada-tarea">
+
+                <input
+                    type="text"
+                    id="nuevaTarea"
+                    placeholder="Escribe una tarea..."
+                >
+
+                <button onclick="agregarTarea()">
+                    Agregar
+                </button>
+
+            </div>
+
+            <ul id="listaTareas"></ul>
+
+            <button
+                class="boton-peligro"
+                onclick="borrarTareas()">
+                Borrar todas
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- MULTIMEDIA -->
+    <section id="multimedia">
+
+        <h2>🎬 Multimedia</h2>
+
+        <div class="videos">
+
+            <div class="video">
+
+                <iframe
+                    src="https://www.youtube.com/embed/2eK7nWmM8rA"
+                    title="Video sobre computadoras"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+
+            <div class="video">
+
+                <iframe
+                    src="https://www.youtube.com/embed/SzJ46YA_RaA"
+                    title="Video educativo"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+        </div>
+
+
+        <h3 class="titulo-galeria">
+            🖼️ Galería
+        </h3>
+
+        <div class="galeria">
+
+            <img
+                src="img/computadora1.webp"
+                alt="Computadora 1">
+
+            <img
+                src="img/caru.jpg"
+                alt="Computadora 2">
+
+            <img
+                src="img/computadora3.webp"
+                alt="Computadora 3">
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACTO -->
+    <section id="formulario">
+
+        <h2> Formulario de Contacto</h2>
+
+        <form id="formContacto">
+
+            <label for="nombre">
+                Nombre:
+            </label>
+
+            <input
+                type="text"
+                id="nombre"
+                required
+            >
+
+
+            <label for="correo">
+                Correo electrónico:
+            </label>
+
+            <input
+                type="email"
+                id="correo"
+                required
+            >
+
+
+            <label for="tema">
+                Tema:
+            </label>
+
+            <select id="tema">
+
+                <option value="Consulta">
+                    Consulta
+                </option>
+
+                <option value="Sugerencia">
+                    Sugerencia
+                </option>
+
+                <option value="Comentario">
+                    Comentario
+                </option>
+
+            </select>
+
+
+            <label for="mensaje">
+                Mensaje:
+            </label>
+
+            <textarea
+                id="mensaje"
+                rows="5"
+                required>
+            </textarea>
+
+
+            <button type="submit">
+                Enviar mensaje
+            </button>
+
+            <p id="mensajeForm"></p>
+
+        </form>
+
+    </section>
+
+
+    <!-- REGISTRO -->
+    <section id="registro" class="registro-seccion">
+
+        <div class="registro-contenedor">
+
+            <div class="registro-header">
+
+                <h2>
+                    📋 Registro de Estudiantes
+                </h2>
+
+                <p>
+                    Completa el siguiente formulario para registrar
+                    los datos del estudiante.
+                </p>
+
+            </div>
+
+
+            <form
+                id="formRegistro"
+                class="form-registro">
+
+                <div class="campo-registro">
+
+                    <label for="registroNombre">
+                        Nombre completo
+                    </label>
+
+                    <input
+                        type="text"
+                        id="registroNombre"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="campo-registro">
+
+                    <label for="registroNIE">
+                        NIE
+                    </label>
+
+                    <input
+                        type="text"
+                        id="registroNIE"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="campo-registro">
+
+                    <label for="registroEdad">
+                        Edad
+                    </label>
+
+                    <input
+                        type="number"
+                        id="registroEdad"
+                        min="1"
+                        max="100"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="campo-registro">
+
+                    <label for="registroGenero">
+                        Género
+                    </label>
+
+                    <select
+                        id="registroGenero"
+                        required>
+
+                        <option value="">
+                            Seleccionar
+                        </option>
+
+                        <option value="Masculino">
+                            Masculino
+                        </option>
+
+                        <option value="Femenino">
+                            Femenino
+                        </option>
+
+                        <option value="Otro">
+                            Otro
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="campo-registro">
+
+                    <label for="registroTelefono">
+                        Teléfono
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="registroTelefono"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="campo-registro">
+
+                    <label for="registroCorreo">
+                        Correo
+                    </label>
+
+                    <input
+                        type="email"
+                        id="registroCorreo"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="campo-registro campo-completo">
+
+                    <label for="registroDireccion">
+                        Dirección
+                    </label>
+
+                    <input
+                        type="text"
+                        id="registroDireccion"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="registro-botones">
+
+                    <button type="submit">
+                        Registrar estudiante
+                    </button>
+
+                    <button
+                        type="button"
+                        class="boton-secundario"
+                        onclick="exportarExcel()">
+                        Exportar a Excel
+                    </button>
+
+                    <button
+                        type="button"
+                        class="boton-secundario"
+                        onclick="imprimirRegistro()">
+                        Imprimir / PDF
+                    </button>
+
+                    <button
+                        type="button"
+                        class="boton-peligro"
+                        onclick="borrarRegistros()">
+                        Borrar registros
+                    </button>
+
+                </div>
+
+            </form>
+
+
+            <p id="mensajeRegistro"></p>
+
+
+            <div class="registros-guardados">
+
+                <h3 class="titulo-tabla">
+                    Estudiantes registrados
+                </h3>
+
+                <div class="tabla-contenedor">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+                                <th>Nombre</th>
+                                <th>NIE</th>
+                                <th>Edad</th>
+                                <th>Género</th>
+                                <th>Teléfono</th>
+                                <th>Correo</th>
+                                <th>Dirección</th>
+                                <th>Acción</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="tablaEstudiantes"></tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <p>
+        © 2026 COMPUTEC | Mundo de las Computadoras
+    </p>
+
+    <p>
+        Proyecto educativo de Desarrollo de Software
+    </p>
+
+</footer>
+
+
+<button id="arriba">↑</button>
+
+<script src="script.js"></script>
+
+</body>
+</html>
